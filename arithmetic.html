@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arithmetic</title>
+    <meta charset="utf-8" />
+    <style>
+      #container {
+        border: 2px;
+        width: 250px;
+        font-size: xx-large;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Arithmetic</h1>
+    <div id="container">
+      <label>Number1:</label>
+      <input type="text" id="num1" value="0" />
+      <label>Number2:</label>
+      <input type="text" id="num2" value="0" />
+      <label>Answer: </label>
+      <input type="text" id="txtsum" value="0" disabled /><br />
+      <input type="button" value="Add" onClick="add()" /><br />
+      <input type="button" value="Subtract" onClick="subtract()" /><br />
+      <input type="button" value="Multiply" onClick="multiply()" /><br />
+      <input type="button" value="Divide" onClick="divide()" /><br />
+      <input type="button" value="Reset" onclick="reset()" />
+    </div>
+    <script>
+      function add() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 + num2;
+        document.getElementById("txtsum").value = String(sum);
+      }
+      function subtract() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 - num2;
+        document.getElementById("txtsum").value = String(sum);
+      }
+      function multiply() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 * num2;
+        document.getElementById("txtsum").value = String(sum);
+      }
+      function divide() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+        var sum = num1 / num2;
+        document.getElementById("txtsum").value = String(sum);
+      }
+      function reset() {
+        var num1 = (document.getElementById("num1").value = "0");
+        var num2 = (document.getElementById("num2").value = "0");
+
+        sum = document.getElementById("txtsum").value = "0";
+      }
+    </script>
+  </body>
+</html>
